@@ -18,5 +18,12 @@ function crearVent() {
 }
 
 function cerrarVent() {
-  self.close();
-}
+    if (ventana==undefined || ventana.closed) {
+        self.close(); // cerrar ventana principal
+    }else if (confirm(`Ventana secundaria abierta\n¿Quiere cerrar la ventana secundaria?`)){
+        ventana.close();
+        self.close();
+    }else{
+        ventana.focus();
+    }
+} 
