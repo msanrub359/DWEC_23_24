@@ -24,5 +24,6 @@ document.write(`<br>La fecha de hoy sumando 24 días ${fechaHoy.toLocaleDateStri
 
 //mostrar los días que hay entre dos fechas 
 
-const diasResta=fechaHoy-new Date()
+const diasResta=fechaHoy-new Date();
+console.log(diasResta);
 document.write(`<br>Los días que transcurren entre ${new Date().toLocaleDateString()}  y ${fechaHoy.toLocaleDateString()} es ${diasResta/1000/60/60/24} dias`);
