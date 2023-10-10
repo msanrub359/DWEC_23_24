@@ -57,16 +57,17 @@ class Alumno {
 // cuerpo 
 try {
   const alumno = new Alumno("Pepe", "Pérez Rodríguez", 3);
+  //alumno.edad=5;
   //const alumno=new Alumno();
   //  alumno.nombre="María";
    
   //  alumno.apellidos="Pérez"
-  //   console.log(alumno.nombre);
-  //   console.log(alumno._nombre);
+     console.log(alumno.nombre);
+     console.log(alumno._nombre);
   // //   //console.log(alumno._apellidos);
   //   alumno.edad = 3; 
-    document.write(alumno.toString())
-} catch (error) {
-    console.log(error);
+    console.log(alumno.toString())
+} catch (err) {
+    console.log(err);
 }
 

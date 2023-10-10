@@ -41,8 +41,9 @@ class DispElec extends Electro{
     }
 }
 
-
+//cuerpo stript
 const frigo=new Electro("Frigo", 200,'red');
+//statuc
 const frigoStatic = Electro.crearElectro("Frigo Static", 300,'blue')
 const horno=new Electro("Horno", 300,'blue');
 const portatil=new DispElec("HP", 700, "white", "500Gb", '12Gb')
@@ -51,7 +52,7 @@ console.log(frigo.toString());
 console.log(horno.toString());
 
 
-//console.log(frigo.mensaje()); //error
+
 console.log(portatil);
 console.log(portatil.toString());
 

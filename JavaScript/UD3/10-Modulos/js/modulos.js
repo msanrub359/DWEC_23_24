@@ -1,9 +1,16 @@
-"use strict";
-//propiedades y métodos privados
-class Profe{
+"use strict"
+
+export const mensaje="Hola a todos";
+
+export const calcularMedia=()=>{
 
 }
-class Alumno {
+
+const division=()=>{ //no es exportable
+
+}
+
+export class Alumno {
   #nombre;
   #apellidos;
   #edad;
@@ -49,16 +56,3 @@ class Alumno {
 
   }
 }
-
-//cuerpo script
-try {
-    const alumno = new Alumno("Pepe", "Pérez Rodríguez", 23);
-    console.log(`instancia ${alumno instanceof Profe}`); //averiguar si un objeto ha sido instanciado por una determinada clase
-    
-    console.log(alumno.nombre);
-    console.log(alumno.apellidos); //error
-    //alumno.edad = 12; 
-} catch (error) {
-    console.log(error);
-}
-
