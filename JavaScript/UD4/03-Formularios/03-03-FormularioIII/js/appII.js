@@ -8,10 +8,20 @@ window.addEventListener("DOMContentLoaded",()=>{
     //establecer evento click al botón cancelr
     document.getElementById("cancelar").addEventListener("click", limpiar);
     //establecer el evento blur para comprobar que edad sea >=18
-    edad.addEventListener("blur", comprobarEdad)
+    edad.addEventListener("blur", comprobarEdad);
+    activarCaptcha();
+
 
    
 })
+const activarCaptcha=()=>{
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LfVXr8UAAAAAMS-4Ar9OHK7RLug-6H6n_qxwo1L', {action: 'submit'}).then(function(token) {
+            console.log({token});
+            document.getElementById("recaptcha").value=token
+        });
+      });
+}
 const validar=(evento)=>{
    //anular envío
   
