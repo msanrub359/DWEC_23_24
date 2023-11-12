@@ -1,0 +1,25 @@
+#sortable {
+    margin: 0;
+    padding: 0;
+    width: 550px;
+}
+
+#sortable li {
+    list-style: none;
+    margin: 3px 3px 3px 0;
+    padding: 1px;
+    float: left;
+    width: 100px;
+    height: 90px;
+    font-size: 4em;
+    text-align: center;
+    border: 1px solid;
+}
+
+.child{ 
+    display:inline-block; 
+    vertical-align:middle; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
