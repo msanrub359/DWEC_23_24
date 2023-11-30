@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ciclo>
+ <curso>
+	<asig>SIM</asig>
+	<asig>prog</asig>
+	<asig>BD</asig>
+ </curso>
+ <curso>
+ 	<asig>DEWC</asig>
+	<asig>DEWS</asig>
+	<asig>DIW</asig>
+ </curso>
+</ciclo>
