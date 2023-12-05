@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
    console.log(card.parentNode);
  
    console.log(card.parentElement); //se recomienda
- //acceso al hermano anterior
-  console.log(card.parentElement.previousSibling.previousSibling);
+//  //acceso al hermano anterior
+   console.log(card.parentElement.previousSibling.previousSibling);
   console.log(card.parentElement.nextSibling.nextSibling);
   card.parentElement.previousSibling.textContent="Cambio hermano traversing"
 })
