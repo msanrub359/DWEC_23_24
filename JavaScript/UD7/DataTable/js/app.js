@@ -1,9 +1,9 @@
 "use strict"
 document.addEventListener("DOMContentLoaded", ()=>{
     mostrarTabla();
-    document.querySelector(".recargar").addEventListener('click', ()=>{
-        mostrarTabla();
-    })
+    // document.querySelector(".recargar").addEventListener('click', ()=>{
+    //     mostrarTabla();
+    // })
 })
 const mostrarTabla=async()=>{
     //fetch
@@ -20,12 +20,18 @@ const mostrarTabla=async()=>{
        $('.table tbody tr').on('click', function(){
         $(this).toggleClass("selected");
     })
+    //configurar la tabla con la librería dataTable
        $('.table').DataTable({
         'language':{
             url:'../assets/librerias/DataTables/es-Es.json'
         },
+        'columnDefs':[
+            {
+                "className": "dt-center", "targets":"_all"
+         }
+        ],
         'sPaginationType':'full_numbers', //muestra los botones First y last
-        'bDestroy' :true,
+        //'bDestroy' :true,
         
     });
     
