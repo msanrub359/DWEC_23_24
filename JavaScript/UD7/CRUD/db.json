@@ -1,0 +1,11 @@
+{
+  "clientes": [
+    {
+      "nameCliente": "Pepe Jiménez",
+      "emailCliente": "pepe@gmail.com",
+      "tlfnoCliente": "121212121212",
+      "empresaCliente": "IES TRASSIERA",
+      "id": 1
+    }
+  ]
+}
