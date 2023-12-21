@@ -1,7 +1,13 @@
-"use strict";
+import { addCliente } from "./API.js";
+import { mensaje } from "./funciones.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  confFormulario()
+  confFormulario();
+  document.querySelector(".addCliente").addEventListener("click",()=>{
+    //llamar a la ventana modal
+    $("#frmModal").modal("show")
+  })
+
 });
 const confFormulario = () => {
   $(".frmClientes").validate({
@@ -38,10 +44,33 @@ const confFormulario = () => {
     },
 
     submitHandler: (form) => {
-
+      add(); //añadir cliente
       
       
     },
   });
 };
+const add=async()=>{
+  //recoger los datos del formulario en formato urlencoded
+  const cliente=$(".frmClientes").serialize();
+  console.log(cliente);
+  //llamar la API de addCliente
+  const data= await addCliente(cliente);
 
+  //limpiar formulario
+  $("input").val("");
+  //cerrar el formulario 
+  $("#frmModal").modal("hide");
+  //mostrar el mensaje
+  if (data.mensaje =="insertado"){
+    mensaje ("Cliente grabado", "success");
+    mostrarClientes();
+  }else{
+    mensaje ("Cliente NO grabado", "error");
+  }
+  
+}
+
+const mostrarClientes=()=>{
+
+}
