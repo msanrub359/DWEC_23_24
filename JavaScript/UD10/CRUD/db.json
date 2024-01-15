@@ -1,0 +1,18 @@
+{
+  "clientes": [
+    {
+      "nameCliente": "Mª Luz Sanchez Rubio",
+      "emailCliente": "hola@gmail.es",
+      "tlfnoCliente": "6545254545",
+      "empresaCliente": "IES TRASSIERRA",
+      "id": 1
+    },
+    {
+      "nameCliente": "Angel Pimentel",
+      "emailCliente": "angel@gmail.com",
+      "tlfnoCliente": "624858484",
+      "empresaCliente": "empresaAngel",
+      "id": 2
+    }
+  ]
+}
