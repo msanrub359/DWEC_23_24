@@ -50,25 +50,26 @@ export const deleteCliente=async(id)=>{
     try {
         const response=await fetch(`${url}/${id}`, param);
         const data=await response.json(); //modificar
-        return data
+        return ({'mensaje': 'borrado'})
     } catch (error) {
-       return(error) 
+        return ({'mensaje': 'NO borrado'})
     }
 }
 export const updateCliente=async(cliente, id)=>{
     const param={
-        method:'PATCH',
-        body:JSON.stringify(cliente),
+        method:'PUT',
+        
         headers:{
             'Content-Type':'application/json'
            
-        }
+        },
+        body:JSON.stringify(cliente)
     }
     try {
         const response=await fetch(`${url}/${id}`,param);
         const data=await response.json();
-        return(data)
+        return ({'mensaje': 'Actualizado'})
     } catch (error) {
-        return(error)
+        return ({'mensaje': 'No Actualizado'})
     }
 }
