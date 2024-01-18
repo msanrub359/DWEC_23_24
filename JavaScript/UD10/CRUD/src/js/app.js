@@ -125,19 +125,17 @@ const borrarCliente=function(){
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       
-      const data=await deleteCliente(id);
+      const texto=await deleteCliente(id);
       
       
-        mensaje(`Cliente ${data.message}`, 'warning')
-
-      
-      
+      mensaje(`Cliente ${texto.mensaje}`, 'warning')
+       
        mostrarClientes()
      
      
       
     } else if (result.isDimissed) {
-       mensaje(`Cliente ${texto.mensaje}`, 'warning')
+      mensaje(`Cliente ${texto.mensaje}`, 'warning')
     }
   })
 }
@@ -172,7 +170,7 @@ const modificarCliente=async()=>{
   }
    console.log(cliente);
    const data= await updateCliente(cliente, id);
-   mensaje(`Cliente ${data.message}`, 'warning')
+   mensaje(`Cliente ${data.mensaje}`, 'warning')
   //borrar datos del formulario
   $("input").val("");
   //cerrar el formulario
